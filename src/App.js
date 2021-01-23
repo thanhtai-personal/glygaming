@@ -1,21 +1,7 @@
-import React, { useEffect } from 'react';
 import logo from './logo.svg';
 import './App.css';
 
 function App() {
-
-  useEffect(() => {
-    const fbScript = document.createElement('script');
-    fbScript.src = 'https://connect.facebook.net/en_US/fbinstant.6.2.js';
-    fbScript.id = 'fb-instant';
-    document.body.appendChild(fbScript);
-    fbScript.onload = () => {
-      window.FBInstant.initializeAsync().then(() => {
-        window.FBInstant.startGameAsync().then();
-      });
-    }
-  }, [])
-
   return (
     <div className="App">
       <header className="App-header">
